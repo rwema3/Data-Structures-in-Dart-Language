@@ -38,3 +38,5 @@ class OrderedArray {
     for (j = 0; j < nElems; j ++) {
       if (a[j] > value) {
         break;
+      }
+    }
