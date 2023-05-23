@@ -57,3 +57,6 @@ class OrderedArray {
 
 void main(List<String> args) {
   int maxSize = 100;
+  OrderedArray orderedArray = new OrderedArray(maxSize);
+  orderedArray.insert(72);
+  orderedArray.insert(90);
