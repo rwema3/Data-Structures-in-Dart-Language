@@ -16,4 +16,3 @@ class OrderedArray {
   int find(int searchKey) {
     return _recursionFind(searchKey, 0, nElems - 1);
   }
-S
