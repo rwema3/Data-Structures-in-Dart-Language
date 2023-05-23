@@ -1,0 +1,6 @@
+platforms: [vm]
+
+paths:
+  - 01_array/test
+  - 01_array/tasks/test
+  - 02_simple_sorting/test
