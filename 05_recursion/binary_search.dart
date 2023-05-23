@@ -34,4 +34,7 @@ class OrderedArray {
   }
 
   void insert(int value) {
+    int j;
+    for (j = 0; j < nElems; j ++) {
+      if (a[j] > value) {
         break;
