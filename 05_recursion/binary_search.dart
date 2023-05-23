@@ -33,4 +33,5 @@ class OrderedArray {
     }
   }
 
-  void insert(int value) {        break;
+  void insert(int value) {
+        break;
