@@ -22,3 +22,7 @@ class OrderedArray {
     curIn = (lowerBound + upperBound) ~/ 2;
     if (a[curIn] == searchKey){
       return curIn;
+    } else if (lowerBound > upperBound) {
+      return nElems;
+    } else {
+      if (a[curIn] < searchKey) {
