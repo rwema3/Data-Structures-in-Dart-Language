@@ -69,3 +69,8 @@ void main(List<String> args) {
   orderedArray.insert(135);
   orderedArray.insert(81);
   orderedArray.insert(18);
+  orderedArray.insert(108);
+  orderedArray.insert(9);
+  orderedArray.insert(117);
+  orderedArray.insert(63);
+  orderedArray.insert(36);
