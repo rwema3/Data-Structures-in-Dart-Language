@@ -26,3 +26,7 @@ class OrderedArray {
       return nElems;
     } else {
       if (a[curIn] < searchKey) {
+        return _recursionFind(searchKey, curIn + 1, upperBound);
+      } else {
+        return _recursionFind(searchKey, lowerBound, curIn - 1 );
+      }
