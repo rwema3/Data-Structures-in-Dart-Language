@@ -26,3 +26,14 @@ class Array {
     _recursiveMergeSort(workSpace, 0, numberOfElements - 1);
   }
 
+  void _recursiveMergeSort(List<int> workSpace, int lowerBound, int upperBound) {
+    if (lowerBound == upperBound) {
+      return;
+    } else {
+      int mid = (lowerBound + upperBound) ~/ 2;
+      _recursiveMergeSort(workSpace, lowerBound, mid);
+      _recursiveMergeSort(workSpace, mid + 1, upperBound);
+      _merge(workSpace, lowerBound, mid + 1, upperBound);
+    }
+  }
+
