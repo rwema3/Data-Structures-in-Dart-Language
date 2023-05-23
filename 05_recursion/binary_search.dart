@@ -18,3 +18,7 @@ class OrderedArray {
   }
 
   int _recursionFind(int searchKey, int lowerBound, int upperBound) {
+    int curIn;
+    curIn = (lowerBound + upperBound) ~/ 2;
+    if (a[curIn] == searchKey){
+      return curIn;
