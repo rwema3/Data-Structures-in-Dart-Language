@@ -53,3 +53,7 @@ class OrderedArray {
     }
     stdout.writeln();
   }
+}
+
+void main(List<String> args) {
+  int maxSize = 100;
