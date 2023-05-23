@@ -37,3 +37,29 @@ class Array {
     }
   }
 
+  void _merge(List<int> workSpace, int lowPtr, int highPtr, int upperBound) {
+    int i = 0;
+    int lowerBound = lowPtr;
+    int mid = highPtr - 1;
+    int n = upperBound - lowerBound + 1;
+
+    while (lowPtr <= mid && highPtr <= upperBound) {
+      if (array[lowPtr] < array[highPtr]) {
+        workSpace[i++] = array[lowPtr++];
+      } else {
+        workSpace[i++] = array[highPtr++];
+      }
+    }
+
+    while (lowPtr <= mid) {
+      workSpace[i++] = array[lowPtr++];
+    }
+    while (highPtr <= upperBound) {
+      workSpace[i++] = array[highPtr++];
+    }
+
+    for (i=0; i < n; i ++) {
+      array[lowerBound + i] = workSpace[i];
+    }
+  }
+}
