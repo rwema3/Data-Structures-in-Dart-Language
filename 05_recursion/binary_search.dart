@@ -30,3 +30,7 @@ class OrderedArray {
       } else {
         return _recursionFind(searchKey, lowerBound, curIn - 1 );
       }
+    }
+  }
+
+  void insert(int value) {        break;
