@@ -48,3 +48,8 @@ class OrderedArray {
   }
 
   void display() {
+    for (int i = 0; i < nElems; i ++){
+      stdout.write('${a[i]} ');
+    }
+    stdout.writeln();
+  }
