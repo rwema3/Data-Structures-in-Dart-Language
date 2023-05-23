@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/artem-galas/data_structures_in_dart.svg?branch=master)](https://travis-ci.org/artem-galas/data_structures_in_dart)
 
-This is a repository inspired by **[Data Structures & Algorithms in Java by Robert Lafore](https://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539)** Developed by **[Rwema D. Bagirishya](www.rwema.com)**.
+This is a repository inspired by **[Data Structures & Algorithms in Java by Robert Lafore](https://www.amazon.com/Data-Structures-Algorithms-Java-2nd/dp/0672324539)** Developed by **[Rwema D. Bagirishya](https://www.rwema.com)**.
 
 There you can find all code-example rewritten on Dart and all solved tasks
 
