@@ -63,3 +63,25 @@ class Array {
     }
   }
 }
+
+void main() {
+  int maxSize = 100;
+  Array array = new Array(maxSize);
+  array.insert(64);
+  array.insert(21);
+  array.insert(33);
+  array.insert(70);
+  array.insert(12);
+  array.insert(85);
+  array.insert(44);
+  array.insert(3);
+  array.insert(99);
+  array.insert(0);
+  array.insert(108);
+  array.insert(36);
+
+  array.display();
+
+  array.mergeSort();
+  array.display();
+}
