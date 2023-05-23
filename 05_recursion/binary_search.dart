@@ -82,3 +82,6 @@ void main(List<String> args) {
   if (orderedArray.find(searchKey) != orderedArray.size()) {
     stdout.writeln('Found $searchKey');
   } else {
+    stdout.writeln("Can't find $searchKey");
+  }
+}
