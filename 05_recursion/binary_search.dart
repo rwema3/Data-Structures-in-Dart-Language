@@ -60,3 +60,8 @@ void main(List<String> args) {
   OrderedArray orderedArray = new OrderedArray(maxSize);
   orderedArray.insert(72);
   orderedArray.insert(90);
+  orderedArray.insert(45);
+  orderedArray.insert(126);
+  orderedArray.insert(54);
+  orderedArray.insert(99);
+  orderedArray.insert(144);
