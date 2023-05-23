@@ -44,3 +44,7 @@ class OrderedArray {
       a[k] = a[k - 1];
     }
     a[j] = value;
+    nElems ++;
+  }
+
+  void display() {
