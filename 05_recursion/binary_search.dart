@@ -8,3 +8,7 @@ class OrderedArray {
     a = new List<int>(max);
     nElems = 0;
   }
+
+  int size() {
+    return nElems;
+  }
