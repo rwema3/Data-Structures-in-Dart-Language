@@ -74,3 +74,7 @@ void main(List<String> args) {
   orderedArray.insert(117);
   orderedArray.insert(63);
   orderedArray.insert(36);
+
+  orderedArray.display();
+
+  int searchKey = 27;
