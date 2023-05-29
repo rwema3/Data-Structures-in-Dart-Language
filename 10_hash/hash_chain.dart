@@ -123,7 +123,7 @@ class HashTable {
   }
 }
 
-void main() {
+void main() { //main functions with three global variables
   int key;
   Link dataItem;
   int size, n;
