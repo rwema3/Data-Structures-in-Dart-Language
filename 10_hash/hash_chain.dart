@@ -54,4 +54,22 @@ class SortedList {
     if (previous == null) {
       first = first.next;
     } else {
-      previous.next = current.next;
+      previous.next = current.next;    }
+  }
+
+  Link find(int key) {
+    Link current = first;
+
+    while(current != null && current.getKey() <= key) {
+      if (current.getKey() == key) {
+        return current;
+      }
+      current = current.next;
+    }
+    return null;
+  }
+
+  void displayList() {
+    stdout.write('List (first -> last): ');
+    Link current = first;
+    while(current != null) {
