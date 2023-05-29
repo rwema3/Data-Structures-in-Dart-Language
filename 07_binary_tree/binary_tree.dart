@@ -130,3 +130,16 @@ class Tree {
       }
     }
     return true;    
+  }
+
+  Node getSuccessor(Node delNode) {
+    Node successorParent = delNode;
+    Node successor = delNode;
+    Node current = delNode.rightChild;
+
+    while (current != null) {
+      successorParent = successor;
+      successor = current;
+      current = current.leftChild;
+    }
+    if (successor != delNode.rightChild) {
