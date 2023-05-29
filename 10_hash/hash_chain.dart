@@ -135,3 +135,46 @@ void main() {
 
   stdout.write('Enter initial number of items: ');
   n = int.parse(stdin.readLineSync());
+
+  HashTable hashTable = new HashTable(size);
+
+  for(int i = 0; i < n; i ++) {
+    key = random.nextInt(100);
+    dataItem = new Link(key);
+    hashTable.insert(dataItem);
+  }
+
+  while(true) {
+    stdout.writeln('Enter first leter of show, insert, delete, find');
+    String choice = stdin.readLineSync();
+
+    switch(choice) {
+      case 's':
+        hashTable.displayTable();
+        break;
+      case 'i':
+        stdout.write('Enter key value to insert: ');
+        key = int.parse(stdin.readLineSync());
+        dataItem = new Link(key);
+        hashTable.insert(dataItem);
+        break;
+      case 'd':
+        stdout.write('Enter key value to deleete: ');
+        key = int.parse(stdin.readLineSync());
+        hashTable.delete(key);
+        break;
+      case 'f':
+        stdout.write('Enter key value to deleete: ');
+        key = int.parse(stdin.readLineSync());
+        dataItem = hashTable.find(key);
+        if (dataItem != null) {
+          stdout.writeln('Found $key');
+        } else {
+          stdout.writeln('Could not find $key');
+        }
+        break;
+      default:
+        stdout.writeln('Invalid entry');
+    }
+  }
+}
