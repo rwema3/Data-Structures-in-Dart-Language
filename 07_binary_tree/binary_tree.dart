@@ -45,4 +45,27 @@ class Tree {
     if (root == null) {
       root = newNode;
     } else {
-      Nod
+      Node current = root;
+      Node parent;
+      while (true) {
+        parent = current;
+        if (key < current.iData) {
+          current = current.leftChild;
+          if (current == null) {
+            parent.leftChild = newNode;
+            return;
+          }
+        } else {
+          current = current.rightChild;
+          if (current == null) {
+            parent.rightChild = newNode;
+            return;
+          }
+        }
+      }
+    }
+  }
+
+  Node minimum() {
+    Node current = root;
+    Node 
