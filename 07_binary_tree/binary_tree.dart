@@ -116,7 +116,8 @@ class Tree {
           parent.leftChild = current.rightChild;
         } else {
           parent.rightChild = current.rightChild;
-        }      } else {
+        }
+      } else {
         Node successor = getSuccessor(current);
         if (current == root) {
           root = successor;
