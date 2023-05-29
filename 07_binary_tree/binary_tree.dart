@@ -277,3 +277,21 @@ void main(List<String> args) {
           stdout.write('Value not Found');          
         }
         break;
+      case 'd':
+        stdout.write('Enter value to delete: ');
+        int value = int.parse(stdin.readLineSync());
+        bool isDeleted = tree.delete(value);
+        if (isDeleted) {
+          tree.displayTree();
+        } else {
+          stdout.write('Value not Found');
+        }
+        break;
+      case 't':
+        stdout.write('Please write type of traverse; Pre Order - 1, In Order - 2, Post Order - 3: ');
+        int value = int.parse(stdin.readLineSync());        
+        tree.traverse(value);
+        break;  
+    }
+  }
+}
