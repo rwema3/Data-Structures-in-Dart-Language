@@ -143,3 +143,25 @@ class Tree {
       current = current.leftChild;
     }
     if (successor != delNode.rightChild) {
+      successorParent.leftChild = successor.rightChild;
+      successor.rightChild = delNode.rightChild;
+    }
+    return successor;
+  }
+
+  void traverse (int traverseType) {
+    switch (traverseType) {
+      case 1: 
+        stdout.write('Preorder traveral: ');
+        preOrder(root);
+        break;
+      case 2:
+        stdout.write('Inorder traveral: ');
+        inOrder(root);
+        break;
+      case 3:
+        stdout.write('Postorder traveral: ');
+        postOrder(root);
+        break;
+    }
+    stdout.writeln();
