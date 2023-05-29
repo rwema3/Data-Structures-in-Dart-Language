@@ -15,3 +15,17 @@ class Node {
     stdout.write('}');
   }
 }
+
+class Tree {
+  Node root;
+
+  Tree() {
+    root = null;
+  }
+
+  Node find(int key) {
+    Node current = root;
+    while (current.iData != key) {
+      if (key < current.iData) {
+        current = current.leftChild;
+      } e
