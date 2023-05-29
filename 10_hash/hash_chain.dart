@@ -54,7 +54,8 @@ class SortedList {
     if (previous == null) {
       first = first.next;
     } else {
-      previous.next = current.next;    }
+      previous.next = current.next;
+    }
   }
 
   Link find(int key) {
