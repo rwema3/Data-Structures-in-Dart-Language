@@ -165,3 +165,31 @@ class Tree {
         break;
     }
     stdout.writeln();
+  }
+
+  void preOrder(Node localRoot) {
+    if (localRoot != null) {
+      stdout.write('${localRoot.iData} ');
+      preOrder(localRoot.leftChild);
+      preOrder(localRoot.rightChild);
+    }
+  }
+
+  void inOrder(Node localRoot) {
+    if (localRoot != null) {
+      inOrder(localRoot.leftChild);
+      stdout.write('${localRoot.iData} ');
+      inOrder(localRoot.rightChild);
+    }
+  }
+
+  void postOrder(Node localRoot) {
+    if (localRoot != null) {
+      postOrder(localRoot.leftChild);
+      postOrder(localRoot.rightChild);
+      stdout.write('${localRoot.iData} ');
+    }
+  }
+
+  void displayTree() {
+    Queue<Node> globalQueue = new Queue<Node>();
