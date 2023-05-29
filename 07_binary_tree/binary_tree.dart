@@ -224,3 +224,19 @@ class Tree {
           stdout.write(' ');
         }
       }
+      stdout.writeln();
+      nBlanks = nBlanks ~/ 2;
+      while (localQueue.isEmpty == false) {
+        globalQueue.addLast(localQueue.removeLast());
+      }
+    }
+    stdout.writeln(
+      "............................................."
+    );
+  }
+
+}
+
+void main(List<String> args) {
+  Tree tree = new Tree();
+
