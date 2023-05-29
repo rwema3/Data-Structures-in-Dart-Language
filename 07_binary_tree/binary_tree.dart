@@ -68,4 +68,29 @@ class Tree {
 
   Node minimum() {
     Node current = root;
-    Node 
+    Node last;
+    while (current != null) {
+      last = current;
+      current = current.leftChild;
+    }
+    return last;
+  }
+
+  bool delete(int key) {
+    Node current = root;
+    Node parent = root;
+    bool isLeftChild = true;
+
+    while (current.iData != key) {
+      parent = current;
+      if (key < current.iData) {
+        isLeftChild = true;
+        current = current.leftChild;
+      } else {
+        isLeftChild = false;
+        current = current.rightChild;
+      }
+      if (current == null) {
+        return false;
+      }
+      if 
