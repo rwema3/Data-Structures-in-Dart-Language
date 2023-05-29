@@ -31,3 +31,27 @@ class SortedList {
 
     while (current != null && key > current.getKey()) {
       previous = current;
+      current = current.next;
+    }
+    if(previous == null) {
+      first = link;
+    } else {
+      previous.next = link;
+    }
+    link.next = current;
+  }
+
+  /// Remove element
+  void delete(int key) {
+    Link previous = null;
+    Link current = first;
+
+    while (current != null && key != current.getKey()) {
+      previous = current;
+      current = current.next;
+    }
+
+    if (previous == null) {
+      first = first.next;
+    } else {
+      previous.next = current.next;
