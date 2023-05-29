@@ -262,3 +262,18 @@ void main(List<String> args) {
         break;
       case 'i':
         stdout.write('Enter value to insert: ');
+        int value = int.parse(stdin.readLineSync());
+        tree.insert(value, value + 0.9);
+        break;
+      case 'f':
+        stdout.write('Enter value to find: ');
+        int value = int.parse(stdin.readLineSync());
+        Node found = tree.find(value);
+        if (found != null) {
+          stdout.write('Found: ');
+          found.displayNode();
+          stdout.writeln();
+        } else {
+          stdout.write('Value not Found');          
+        }
+        break;
