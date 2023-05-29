@@ -100,3 +100,38 @@ class HashTable {
       hashArray[i].displayList();
     }
   }
+
+  int hashFunc(int key) {
+    return key % arraySize;
+  }
+
+  void insert(Link link) {
+    int key = link.getKey();
+    int hashVal = hashFunc(key);
+    hashArray[hashVal].insert(link);
+  }
+
+  void delete(int key) {
+    int hashVal = hashFunc(key);
+    hashArray[hashVal].delete(key);
+  }
+
+  Link find(int key) {
+    int hashVal = hashFunc(key);
+    Link link = hashArray[hashVal].find(key);
+    return link;
+  }
+}
+
+void main() {
+  int key;
+  Link dataItem;
+  int size, n;
+
+  Random random = new Random();
+
+  stdout.write('Enter size of hash table: ');
+  size = int.parse(stdin.readLineSync());
+
+  stdout.write('Enter initial number of items: ');
+  n = int.parse(stdin.readLineSync());
