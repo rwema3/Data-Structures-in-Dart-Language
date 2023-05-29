@@ -28,4 +28,21 @@ class Tree {
     while (current.iData != key) {
       if (key < current.iData) {
         current = current.leftChild;
-      } e
+      } else {
+        current = current.rightChild;
+      }
+      if (current == null) {
+        return null;
+      }
+    }
+    return current;
+  }
+
+  void insert(int key, double dd) {
+    Node newNode = new Node();
+    newNode.iData = key;
+    newNode.dData = dd;
+    if (root == null) {
+      root = newNode;
+    } else {
+      Nod
