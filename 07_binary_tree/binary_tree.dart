@@ -210,3 +210,17 @@ class Tree {
         if (temp != null) {
           stdout.write(temp.iData);
           localQueue.addLast(temp.leftChild);
+          localQueue.addLast(temp.rightChild);
+
+          if (temp.leftChild != null || temp.rightChild != null) {
+            isRowEmpty = false;
+          }
+        } else {
+          stdout.write('--');
+          localQueue.addLast(null);
+          localQueue.addLast(null);
+        }
+        for (int i = 0; i < nBlanks * 2 - 2; i ++) {
+          stdout.write(' ');
+        }
+      }
