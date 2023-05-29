@@ -74,3 +74,29 @@ class SortedList {
     stdout.write('List (first -> last): ');
     Link current = first;
     while(current != null) {
+      current.displayLink();
+      current = current.next;
+    }
+    stdout.writeln();
+  }
+}
+
+class HashTable {
+  List<SortedList> hashArray;
+  int arraySize;
+
+  HashTable(int size) {
+    arraySize = size;
+    hashArray = new List<SortedList>(arraySize);
+
+    for(int i = 0; i < arraySize; i ++) {
+      hashArray[i] = new SortedList();
+    }
+  }
+
+  void displayTable() {
+    for(int i = 0; i < arraySize; i ++) {
+      stdout.write('$i. ');
+      hashArray[i].displayList();
+    }
+  }
