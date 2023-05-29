@@ -250,3 +250,15 @@ void main(List<String> args) {
   tree.insert(33, 1.2);
   tree.insert(87, 1.7);
   tree.insert(93, 1.5);
+  tree.insert(97, 1.5);
+
+  while(true) {
+    stdout.write('Enter first letter of show, insert, find, delete, traverse: ');
+    String choise = stdin.readLineSync();
+
+    switch(choise) {
+      case 's':
+        tree.displayTree();
+        break;
+      case 'i':
+        stdout.write('Enter value to insert: ');
