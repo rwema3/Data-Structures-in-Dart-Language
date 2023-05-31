@@ -124,4 +124,20 @@ class GraphPath {
 
   void displayPath() {
     for(int i = 0; i < nVerts; i ++) {
+      stdout.write('${vertexList[i].label} = ');
+
+      if(sPath[i].distance == INFINITY) {
+        stdout.write('inf');
+      } else {
+        stdout.write(sPath[i].distance);
+      }
+
+      String parent = vertexList[sPath[i].parentVert].label;
+      stdout.write('($parent) ');
+    }
+
+    stdout.writeln();
+  }
+}
+
 
