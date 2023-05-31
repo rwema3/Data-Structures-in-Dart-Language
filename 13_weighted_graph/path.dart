@@ -109,4 +109,13 @@ class GraphPath {
         continue;
       }
 
+      int currentToFringe = adjMat[currentVert][column];
+      int startToFringe = startToCurrent + currentToFringe;
+      int sPathDist = sPath[column].distance;
+
+      if(startToFringe < sPathDist) {
+        sPath[column].parentVert = currentVert;
+        sPath[column].distance = startToFringe;
+      }
+
 
