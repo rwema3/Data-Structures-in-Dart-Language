@@ -118,4 +118,10 @@ class GraphPath {
         sPath[column].distance = startToFringe;
       }
 
+      column ++;
+    }
+  }
+
+  void displayPath() {
+    for(int i = 0; i < nVerts; i ++) {
 
