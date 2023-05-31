@@ -43,3 +43,15 @@ class GraphPath {
     sPath = new List<DistPar>(maxVerts);
   }
 
+  void addVertex(String label) {
+    vertexList[nVerts++] = new Vertex(label);
+  }
+
+  void addEdge(int start, int end, int weight) {
+    adjMat[start][end] = weight;
+  }
+
+  void path() {
+    int startTree = 0;
+    vertexList[startTree].isInTree = true;
+
