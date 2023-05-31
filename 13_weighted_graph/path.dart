@@ -141,3 +141,25 @@ class GraphPath {
 }
 
 
+void main() {
+  GraphPath graphPath = new GraphPath();
+
+  graphPath.addVertex('A'); // 0
+  graphPath.addVertex('B'); // 1
+  graphPath.addVertex('C'); // 2
+  graphPath.addVertex('D'); // 3
+  graphPath.addVertex('E'); // 4
+
+  graphPath.addEdge(0, 1, 50); // AB 50
+  graphPath.addEdge(0, 3, 80); // AD 80
+  graphPath.addEdge(1, 2, 60); // BC 60
+  graphPath.addEdge(1, 3, 90); // BD 90
+  graphPath.addEdge(2, 4, 40); // CE 40
+  graphPath.addEdge(3, 2, 20); // DC 20
+  graphPath.addEdge(3, 4, 70); // DE 70
+  graphPath.addEdge(4, 1, 50); // EB 50
+
+  stdout.writeln('Shortest Path: ');
+  graphPath.path();
+  stdout.writeln();
+}
