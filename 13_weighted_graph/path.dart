@@ -82,3 +82,14 @@ class GraphPath {
 
     nTree = 0;
 
+    for(int i = 0; i < nVerts; i ++) {
+      vertexList[i].isInTree = false;
+    }
+  }
+
+  int getMin() {
+    int minDist = INFINITY;
+    int indexMin = 0;
+    for(int i = 1; i < nVerts; i ++) {
+      if(!vertexList[i].isInTree && sPath[i].distance < minDist) {
+
