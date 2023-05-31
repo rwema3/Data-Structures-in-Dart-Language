@@ -92,4 +92,21 @@ class GraphPath {
     int indexMin = 0;
     for(int i = 1; i < nVerts; i ++) {
       if(!vertexList[i].isInTree && sPath[i].distance < minDist) {
+        minDist = sPath[i].distance;
+        indexMin = i;
+      }
+    }
+
+    return indexMin;
+  }
+
+  void adjust_sPath() {
+    int column = 1;
+    while(column < nVerts) {
+      if(vertexList[column].isInTree) {
+        column ++;
+
+        continue;
+      }
+
 
