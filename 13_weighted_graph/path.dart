@@ -67,4 +67,18 @@ class GraphPath {
 
       if(minDist == INFINITY) {
         stdout.writeln('There are unreachable verices');
+        break;
+      } else {
+        currentVert = indexMin;
+        startToCurrent = sPath[indexMin].distance;
+      }
+
+      vertexList[currentVert].isInTree = true;
+      nTree ++;
+      adjust_sPath();
+    }
+
+    displayPath();
+
+    nTree = 0;
 
