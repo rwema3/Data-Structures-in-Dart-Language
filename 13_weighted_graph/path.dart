@@ -54,4 +54,17 @@ class GraphPath {
   void path() {
     int startTree = 0;
     vertexList[startTree].isInTree = true;
+    nTree = 1;
+
+    for(int i = 0; i < nVerts; i ++) {
+      int tempDist = adjMat[startTree][i];
+      sPath[i] = new DistPar(startTree, tempDist);
+    }
+
+    while(nTree < nVerts) {
+      int indexMin = getMin();
+      int minDist = sPath[indexMin].distance;
+
+      if(minDist == INFINITY) {
+        stdout.writeln('There are unreachable verices');
 
